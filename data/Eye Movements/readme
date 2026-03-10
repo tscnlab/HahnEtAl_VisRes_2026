@@ -1,0 +1,4 @@
+Eye movement data has been segregated into two categories. 
+First, "Whole measurement" includes eye movement data over the entire 4 minute measurment period for each measurement of each participant. 
+"FullAOI" refers to the entire visual field recorded by the eye tracker.
+Second, "Initial 15s" includes three bins of five seconds each, where the eye movements differences over temporal change are included.
