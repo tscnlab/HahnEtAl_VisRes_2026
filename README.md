@@ -1,19 +1,33 @@
 <img src="https://github.com/tscnlab/Templates/blob/main/logo/logo_with_text-01.png" width="400"/>
 
-# Workflow description 
-Here we explain the Python script processing and any manual steps in sequential order. 
+# Overview
 
-## Base code
-This Python script is used to extract all the necessary data from the respective files in the "data" folder. In order to run the script successfully, all the files need to be downloaded 
-and the script updated (source names) to direct it to the correct files. Run the individual subscripts one after another.
+Repository for the publication: **Regulation of eye movements and pupil size in natural scenes**, publicly accessible under (https://doi.org/10.1016/j.visres.2026.108801)
+Here we explain the Python script processing and any manual steps in sequential order to reproduce the analysis of the data
 
-### Light data
-The files that could be exported are in a .gos-format, which is not common and tricky to open with anything but the software used for the spectroradio meter MCS15 by Gigahertz Optik. 
-The code das not run with the .gos-files and is instead fed with a summary file (mcs15.csv) that summarizes all light measurement data for every participant. Another file (pupil_luminance.csv) is used to plot the relationship between pupil size (mm) and luminance (lux).
+## Cloning the repository
 
-### Eye movement data
-The eye movement data analysis runs on the raw data .csf-files extracted by the Tobii Pro Glasses 3. The 5-second-interval analysis is performed with raw data that was extracted from five 
-second long times of interst (TOI). The code of these TOI-analysis is similarly structures as the "whole measurement"-analysis.
+This repository first needs to be cloned to a local directory on your machine
 
-### Post-measurement questionnairs
-The post-measurement questionnaire data is summarized in a single table 
+## Data
+
+1. The data must be downloaded from the cloned "EyeMoveChar"-Repository. You should download all available datasets that are provided.
+2. The downloaded data must then all be placed in the same location on your machine.
+
+   2.1. Eye Movement Data: Here, a division of the whole-measurement data and initial-15s-data was performed. Depending on which code you would like to run, you only require one or the other. However, the scripts require all files to be downloaded from either "Data/Eye Movements/Initial 15s" or "Data/Eye Movements/Whole Measurement" to run smoothly.
+
+   2.2. Light: No separation between whole measurement or initial measurement sequence was performed here. Please download the data from "EyeMoveChar/Data/Light/cleaned_summary/mcs15.csv" and "EyeMoveChar/Data/Light/cleaned_summary/pupil_luminance.csv" for running the script. Here, relevant data from unwieldly raw data is summarized for easier analysis. The raw data is provided as well in "EyeMoveChar/Data/Light/raw" (Note: The code does not run with the .gos-files provided by the light measurement device. To view the .gos-files the required software is provided by Gigahertz-Optik (https://www.gigahertz-optik.com/en-us/product/msc15/) upon purchasing their product).
+   
+   2.3. Post-measurement questionnaire: No separation between whole measurement or initial measurement sequence was performed here. Please download the data from" Data/Questionnaire/Post-measurement questionnaire/PMQ.csv"
+
+3. Videos, images and metadata of each measurement are available on FigShare (Indoor scene 1: https://doi.org/10.6084/m9.figshare.30518291; Indoor scene 2: https://doi.org/10.6084/m9.figshare.30520733; Indoor scene 3: https://doi.org/10.6084/m9.figshare.30520892; Outdoor scene 1: https://doi.org/10.6084/m9.figshare.30520829; Outdoor scene 2: https://doi.org/10.6084/m9.figshare.30520925; Outdoor scene 3: https://doi.org/10.6084/m9.figshare.30520979).). This data is not required for running the provided scripts.
+
+## Code
+
+The notebooks in this repository were developed using Jupyter Notebook. All required Python packages are included in the Anaconda distribution. Installing Anaconda should therefore provide the necessary environmentto run the code.
+
+1. Depending on your preference for analysis, download the codes "EyeMoveChar-BaseCode_VR.ipynb" to analyze the full duration of eye movement measurements and/or "EyeMoveChar_TOI_Bins.ipynb" for analysis of the initial three 5 seconds time binse of each measurement.
+2. The manuscripts are quite large an require manual renaming of the path where the downloaded data is stored on you machine
+3. Run the individual subscripts of each code one after another
+
+
