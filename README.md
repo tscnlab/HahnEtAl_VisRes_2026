@@ -1,7 +1,7 @@
 <img src="https://github.com/tscnlab/Templates/blob/main/logo/logo_with_text-01.png" width="400"/>
 
 # Workflow description 
-Here we explain the PYTHON script processing and any manual steps in sequential order. 
+Here we explain the Python script processing and any manual steps in sequential order. 
 
 ## Base code
 This Python script is used to extract all the necessary data from the respective files in the "data" folder. In order to run the script successfully, all the files need to be downloaded 
@@ -15,5 +15,5 @@ The code das not run with the .gos-files and is instead fed with a summary file 
 The eye movement data analysis runs on the raw data .csf-files extracted by the Tobii Pro Glasses 3. The 5-second-interval analysis is performed with raw data that was extracted from five 
 second long times of interst (TOI). The code of these TOI-analysis is similarly structures as the "whole measurement"-analysis.
 
-### Post-measurment questionnairs
-The post-measureent questionnaire data is summarized in a single table 
+### Post-measurement questionnairs
+The post-measurement questionnaire data is summarized in a single table 
