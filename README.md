@@ -1,6 +1,6 @@
 <img src="https://github.com/tscnlab/Templates/blob/main/logo/logo_with_text-01.png" width="400"/>
 
-# Overview
+# Hahn et al. (2026), Vision Research
 
 Repository for the publication: **Regulation of eye movements and pupil size in natural scenes**, publicly accessible under (https://doi.org/10.1016/j.visres.2026.108801)
 Here we explain the Python script processing and any manual steps in sequential order to reproduce the analysis of the data
